@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Persegi</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="calculator-card">
+      <img
+        src="/assets/persegi.jpg"
+        alt="Deskripsi Gambar"
+        style="max-width: 100%"
+      />
+      <h2 id="calculation-title">Hitung Luas Persegi</h2>
+      <label for="side">Panjang Sisi/Rusuk:</label>
+      <input
+        type="number"
+        min="0"
+        id="side"
+        placeholder="Masukkan panjang sisi/rusuk"
+      />
+
+      <div class="toggle-switch">
+        <label class="toggle-switch-label">
+          <input type="checkbox" onchange="toggleCalculation()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="button-container">
+        <button class="calculate-button" onclick="calculate()">Hitung</button>
+        <button class="calculate-button" onclick="calculateBoth()">
+          Hitung Luas & Kelilingnya
+        </button>
+        <button class="reset-button" onclick="resetForm()">Reset</button>
+      </div>
+
+      <div class="result" id="result-area">Luas:</div>
+      <div class="result" id="result-perimeter">Keliling:</div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
