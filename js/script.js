@@ -26,24 +26,22 @@ function displayBothResults() {
 
 function toggleCalculation() {
   var toggleSwitch = document.querySelector(
-    '.toggle-switch input[type="checkbox"]'
+  '.toggle-switch input[type="checkbox"]'
   );
   var resultArea = document.getElementById("result-area");
   var resultPerimeter = document.getElementById("result-perimeter");
   var calculationTitle = document.getElementById("calculation-title");
 
   if (toggleSwitch.checked) {
-    resultArea.style.display = "none";
-    resultPerimeter.style.display = "block";
-    calculationTitle.innerHTML = "Hitung Keliling Persegi";
+  resultArea.style.display = "none";
+  resultPerimeter.style.display = "none";
+  calculationTitle.innerHTML = "Hitung Keliling Persegi";
   } else {
-    resultArea.style.display = "block";
-    resultPerimeter.style.display = "none";
-    calculationTitle.innerHTML = "Hitung Luas Persegi";
+   resultArea.style.display = "none";
+   resultPerimeter.style.display = "none";
+   calculationTitle.innerHTML = "Hitung Luas Persegi";
+   }
   }
-
-  calculate();
-}
 
 function calculate() {
   var side = document.getElementById("side").value;
